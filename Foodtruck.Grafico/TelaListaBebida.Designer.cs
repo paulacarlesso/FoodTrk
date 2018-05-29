@@ -50,45 +50,40 @@
             this.Nome,
             this.Tamanho,
             this.Valor});
-            this.dgBebida.Location = new System.Drawing.Point(8, 70);
+            this.dgBebida.Location = new System.Drawing.Point(11, 66);
             this.dgBebida.Margin = new System.Windows.Forms.Padding(2);
             this.dgBebida.Name = "dgBebida";
             this.dgBebida.RowTemplate.Height = 33;
             this.dgBebida.Size = new System.Drawing.Size(550, 283);
             this.dgBebida.TabIndex = 7;
-            this.dgBebida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebida_CellContentClick);
             // 
             // Id
             // 
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Codigo";
             this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
             // 
             // Nome
             // 
             this.Nome.DataPropertyName = "Nome";
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
             // 
             // Tamanho
             // 
             this.Tamanho.DataPropertyName = "Tamanho";
             this.Tamanho.HeaderText = "Tamanho";
             this.Tamanho.Name = "Tamanho";
-            this.Tamanho.ReadOnly = true;
             // 
             // Valor
             // 
-            this.Tamanho.DataPropertyName = "Valor";
-            this.Tamanho.HeaderText = "Valor";
-            this.Tamanho.Name = "Valor";
-            this.Valor.ReadOnly = true;
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
             // 
             // btAlterar
             // 
-            this.btAlterar.Location = new System.Drawing.Point(179, 14);
+            this.btAlterar.Location = new System.Drawing.Point(182, 10);
             this.btAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btAlterar.Name = "btAlterar";
             this.btAlterar.Size = new System.Drawing.Size(72, 34);
@@ -99,7 +94,7 @@
             // 
             // btRemover
             // 
-            this.btRemover.Location = new System.Drawing.Point(92, 14);
+            this.btRemover.Location = new System.Drawing.Point(95, 10);
             this.btRemover.Margin = new System.Windows.Forms.Padding(2);
             this.btRemover.Name = "btRemover";
             this.btRemover.Size = new System.Drawing.Size(84, 34);
@@ -110,7 +105,7 @@
             // 
             // btAdicionar
             // 
-            this.btAdicionar.Location = new System.Drawing.Point(8, 14);
+            this.btAdicionar.Location = new System.Drawing.Point(11, 10);
             this.btAdicionar.Margin = new System.Windows.Forms.Padding(2);
             this.btAdicionar.Name = "btAdicionar";
             this.btAdicionar.Size = new System.Drawing.Size(80, 34);
@@ -123,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 310);
+            this.ClientSize = new System.Drawing.Size(610, 338);
             this.Controls.Add(this.dgBebida);
             this.Controls.Add(this.btAlterar);
             this.Controls.Add(this.btRemover);

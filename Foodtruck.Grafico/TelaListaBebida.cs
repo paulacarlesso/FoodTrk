@@ -1,5 +1,5 @@
-﻿using System;
-using Foodtruck.Negocio.Models;
+﻿using Foodtruck.Negocio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,18 +18,13 @@ namespace Foodtruck.Grafico
             InitializeComponent();
         }
 
-        private void AbreTelaInclusaoAlteracao(Bebida bebidaSelecionada)
+        private void AbreTelaInclusaoAlteracao(Bebida bebidaSelecionado)
         {
             ManterBebida tela = new ManterBebida();
             tela.MdiParent = this.MdiParent;
-            tela.BebidaSelecionada = bebidaSelecionada;
+            tela.BebidaSelecionada = bebidaSelecionado;
             tela.FormClosed += Tela_FormClosed;
             tela.Show();
-        }
-
-        private void btAdicionar_Click(object sender, EventArgs e)
-        {
-            AbreTelaInclusaoAlteracao(null);
         }
 
         private void Tela_FormClosed(object sender, FormClosedEventArgs e)
@@ -43,23 +38,13 @@ namespace Foodtruck.Grafico
             dgBebida.MultiSelect = false;
             dgBebida.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgBebida.AutoGenerateColumns = false;
-            List<Bebida> clientes = Program.Gerenciador.TodasAsBebidas();
-            dgBebida.DataSource = clientes;
+            List<Bebida> bebida = Program.Gerenciador.TodasAsBebidas();
+            dgBebida.DataSource = bebida;
         }
 
-        private void TelaListaBebidas_Load(object sender, EventArgs e)
+        private void btAdicionar_Click(object sender, EventArgs e)
         {
-            CarregarBebidas();
-        }
-
-        private bool VerificarSelecao()
-        {
-            if (dgBebida.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("Selecione uma linha");
-                return false;
-            }
-            return true;
+            AbreTelaInclusaoAlteracao(null);
         }
 
         private void btRemover_Click(object sender, EventArgs e)
@@ -73,15 +58,24 @@ namespace Foodtruck.Grafico
                     var validacao = Program.Gerenciador.RemoverBebida(bebidaSelecionada);
                     if (validacao.Valido)
                     {
-                        MessageBox.Show("Bebida removido com sucesso");
+                        MessageBox.Show("Cliente removido com sucesso");
                     }
                     else
                     {
-                        MessageBox.Show("Ocorreu um problema ao remover o bebida");
+                        MessageBox.Show("Ocorreu um problema ao remover o cliente");
                     }
                     CarregarBebidas();
                 }
             }
+        }
+        private bool VerificarSelecao()
+        {
+            if (dgBebida.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Selecione uma linha");
+                return false;
+            }
+            return true;
         }
 
         private void btAlterar_Click(object sender, EventArgs e)
@@ -92,10 +86,6 @@ namespace Foodtruck.Grafico
                 AbreTelaInclusaoAlteracao(bebidaSelecionada);
             }
         }
-
-        private void dgBebida_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
+
 }
