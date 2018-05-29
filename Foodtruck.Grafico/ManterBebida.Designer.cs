@@ -85,6 +85,7 @@
             this.tbId.Location = new System.Drawing.Point(74, 31);
             this.tbId.Margin = new System.Windows.Forms.Padding(2);
             this.tbId.Name = "tbId";
+            this.tbId.ReadOnly = true;
             this.tbId.Size = new System.Drawing.Size(150, 20);
             this.tbId.TabIndex = 4;
             // 
@@ -96,7 +97,7 @@
             this.tbNome.Size = new System.Drawing.Size(527, 20);
             this.tbNome.TabIndex = 5;
             // 
-            // tbCpf
+            // tbTamanho
             // 
             this.tbTamanho.Location = new System.Drawing.Point(74, 102);
             this.tbTamanho.Margin = new System.Windows.Forms.Padding(2);
@@ -104,7 +105,7 @@
             this.tbTamanho.Size = new System.Drawing.Size(150, 20);
             this.tbTamanho.TabIndex = 6;
             // 
-            // tbEmail
+            // tbValor
             // 
             this.tbValor.Location = new System.Drawing.Point(74, 139);
             this.tbValor.Margin = new System.Windows.Forms.Padding(2);
@@ -153,6 +154,8 @@
             this.Name = "ManterBebida";
             this.Text = "ManterBebida";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ManterBebida_Load);
+            this.Shown += new System.EventHandler(this.ManterBebi_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

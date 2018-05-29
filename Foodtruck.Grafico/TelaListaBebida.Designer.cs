@@ -62,24 +62,28 @@
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Codigo";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // Nome
             // 
             this.Nome.DataPropertyName = "Nome";
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
             // Tamanho
             // 
             this.Tamanho.DataPropertyName = "Tamanho";
             this.Tamanho.HeaderText = "Tamanho";
             this.Tamanho.Name = "Tamanho";
+            this.Tamanho.ReadOnly = true;
             // 
             // Valor
             // 
             this.Valor.DataPropertyName = "Valor";
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
             // 
             // btAlterar
             // 
@@ -125,6 +129,7 @@
             this.Controls.Add(this.btAdicionar);
             this.Name = "TelaListaBebida";
             this.Text = "TelaListaBebida";
+            this.Load += new System.EventHandler(this.TelaListaBebida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgBebida)).EndInit();
             this.ResumeLayout(false);
 

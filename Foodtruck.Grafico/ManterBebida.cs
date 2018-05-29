@@ -83,5 +83,10 @@ namespace Foodtruck.Grafico
         {
             this.Close();
         }
+
+        private void ManterBebida_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

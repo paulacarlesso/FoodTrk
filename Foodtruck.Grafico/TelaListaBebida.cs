@@ -18,6 +18,11 @@ namespace Foodtruck.Grafico
             InitializeComponent();
         }
 
+        private void TelaListaBebida_Load(object sender, EventArgs e)
+        {
+            CarregarBebidas();
+        }
+
         private void AbreTelaInclusaoAlteracao(Bebida bebidaSelecionado)
         {
             ManterBebida tela = new ManterBebida();
