@@ -32,7 +32,7 @@ namespace Foodtruck.Grafico
 
         private void CarregaTotal()
         {
-            lbTotal.Text = pedido.ValorTotal().ToString();
+            lbTotal.Text = pedido.ValorTotal.ToString();
         }
 
         private void CarregaComboBoxes()
@@ -79,26 +79,31 @@ namespace Foodtruck.Grafico
         {
             try
             {
-                pedido.Cliente = cbClientes.SelectedItem as Cliente;
-                pedido.DataCompra = DateTime.Now;
-                Validacao validacao = Program.Gerenciador.CadastraPedido(pedido);
-                if (validacao.Valido)
+                if (PedidoSelecionado == null)
                 {
-                    MessageBox.Show("Pedido cadastrado com sucesso!");
-                }
-                else
-                {
-                    String msg = "";
-                    foreach (var mensagem in validacao.Mensagens)
+                    pedido.Cliente = cbClientes.SelectedItem as Cliente;
+                    pedido.DataCompra = DateTime.Now;
+                    Validacao validacao = Program.Gerenciador.CadastraPedido(pedido);
+                    if (validacao.Valido)
                     {
-                        msg += mensagem + Environment.NewLine;
+                        MessageBox.Show("Pedido cadastrado com sucesso!");
                     }
-                    MessageBox.Show(msg, "Erro");
+                    else
+                    {
+                        String msg = "";
+                        foreach (var mensagem in validacao.Mensagens)
+                        {
+                            msg += mensagem + Environment.NewLine;
+                        }
+                        MessageBox.Show(msg, "Erro");
+                    }
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro grave, fale com o administrador");
             }
+   
             this.Close();
         }
     }

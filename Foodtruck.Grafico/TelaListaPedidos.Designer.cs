@@ -54,24 +54,28 @@
             this.Id.DataPropertyName = "Id";
             this.Id.HeaderText = "Codigo";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // DadosCliente
             // 
             this.DadosCliente.DataPropertyName = "DadosCliente";
             this.DadosCliente.HeaderText = "Cliente";
             this.DadosCliente.Name = "DadosCliente";
+            this.DadosCliente.ReadOnly = true;
             // 
             // DataCompra
             // 
             this.DataCompra.DataPropertyName = "DataCompra";
             this.DataCompra.HeaderText = "Compra";
             this.DataCompra.Name = "DataCompra";
+            this.DataCompra.ReadOnly = true;
             // 
             // ValorTotal
             // 
             this.ValorTotal.DataPropertyName = "ValorTotal";
             this.ValorTotal.HeaderText = "Total";
             this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.ReadOnly = true;
             // 
             // dgPedido
             // 
@@ -88,7 +92,7 @@
             this.dgPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgPedido.Name = "dgPedido";
             this.dgPedido.RowTemplate.Height = 33;
-            this.dgPedido.Size = new System.Drawing.Size(598, 261);
+            this.dgPedido.Size = new System.Drawing.Size(526, 238);
             this.dgPedido.TabIndex = 15;
             this.dgPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPedido_CellContentClick);
             // 
@@ -107,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 270);
+            this.ClientSize = new System.Drawing.Size(707, 315);
             this.Controls.Add(this.btAdicionar);
             this.Controls.Add(this.dgPedido);
             this.Controls.Add(this.btAlterar);
