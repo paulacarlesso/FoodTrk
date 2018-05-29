@@ -15,6 +15,7 @@ namespace Foodtruck.Grafico
     public partial class AdicionaPedido : Form
     {
         Pedido pedido = new Pedido();
+        public Pedido PedidoSelecionado { get; set; }
 
         public AdicionaPedido()
         {
@@ -26,6 +27,7 @@ namespace Foodtruck.Grafico
             CarregaComboBoxes();
             CarregaDatagrids();
             CarregaTotal();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void CarregaTotal()
@@ -97,7 +99,7 @@ namespace Foodtruck.Grafico
             {
                 MessageBox.Show("Ocorreu um erro grave, fale com o administrador");
             }
-            
+            this.Close();
         }
     }
 }
