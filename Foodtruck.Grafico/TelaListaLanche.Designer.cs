@@ -118,6 +118,7 @@
             this.Controls.Add(this.btRemover);
             this.Name = "TelaListaLanche";
             this.Text = "TelaListaLanche";
+            this.Load += new System.EventHandler(this.TelaListaLanche_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgLanche)).EndInit();
             this.ResumeLayout(false);
 

@@ -56,6 +56,7 @@
             this.dgBebida.RowTemplate.Height = 33;
             this.dgBebida.Size = new System.Drawing.Size(550, 283);
             this.dgBebida.TabIndex = 7;
+            this.dgBebida.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebida_CellContentClick);
             // 
             // Id
             // 
