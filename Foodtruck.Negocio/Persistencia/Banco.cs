@@ -12,6 +12,9 @@ namespace Foodtruck.Negocio.Persistencia
 {
     public class Banco : DbContext
     {
+        public Banco()
+        {
+        }
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Bebida> Bebidas { get; set; }
         public virtual DbSet<Lanche> Lanches { get; set; }
